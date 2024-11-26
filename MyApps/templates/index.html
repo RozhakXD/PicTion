@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="id">
+    <head> {% load static %}
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PicTion - Gambar Menjadi Caption</title>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="icon" href="{% static 'images/favicon.ico' %}">
+    </head>
+    <body class="bg-gradient-to-r from-blue-50 to-blue-100 min-h-screen text-gray-800">
+        <header class="bg-blue-600 text-white shadow-md">
+            <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+                <h1 class="text-3xl font-bold">PicTion</h1>
+                <p class="text-base flex-grow text-right">Mengubah Gambar Menjadi Caption</p>
+            </div>
+        </header>
+        <main class="container mx-auto px-6 py-12">
+            <div class="bg-white rounded-lg p-8 hover-effect custom-shadow">
+                <h2 class="text-2xl font-bold text-center text-blue-600 mb-6">Unggah dan Dapatkan Caption</h2>
+                <p class="text-center text-gray-600 mb-8">Unggah gambar Anda, analisis secara otomatis, dan dapatkan deskripsi dengan cepat!</p>
+                <form id="image-form" class="space-y-6 text-center">
+                    <label for="image-upload" class="block">
+                        <div class="border-2 border-dashed border-gray-300 rounded-lg p-6 cursor-pointer bg-blue-50 hover:bg-blue-100 transition flex flex-col items-center justify-center gap-y-2">
+                            <i class="fas fa-camera text-blue-500 text-5xl md:text-6xl lg:text-7xl"></i>
+                            <p class="text-gray-700 text-sm md:text-base lg:text-lg mt-2">Klik untuk unggah foto</p>
+                        </div>
+                        <input type="file" id="image-upload" class="hidden">
+                    </label>
+                    <!-- Elemen untuk pratinjau gambar -->
+                    <div id="image-preview" class="mt-4 hidden">
+                        <img id="preview-img" class="mx-auto rounded-lg shadow-md max-w-full h-auto" alt="Pratinjau Gambar" />
+                    </div>
+                    <button type="submit" class="w-full bg-blue-600 text-white font-semibold py-3 rounded-lg hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"> Analisis Gambar </button>
+                </form>
+                <div id="result" class="mt-8 hidden">
+                    <div class="bg-gray-50 border-l-4 border-blue-600 rounded-lg p-4">
+                        <h3 class="text-lg font-bold text-blue-600">Hasil Analisis:</h3>
+                        <p id="caption" class="text-gray-800 mt-2"></p>
+                        <p id="translated-caption" class="text-gray-800 mt-1 font-medium"></p>
+                    </div>
+                </div>
+                <div id="notification" class="fixed top-4 right-4 z-50 hidden bg-blue-600 text-white rounded-lg shadow-lg p-4 flex items-center gap-x-4">
+                    <i class="fas fa-info-circle text-xl"></i>
+                    <p id="notification-message" class="text-sm"></p>
+                    <button id="close-notification" class="ml-auto text-white hover:text-gray-200">
+                        <i class="fas fa-times"></i>
+                    </button>
+                </div>
+                <div id="loading" class="fixed inset-0 bg-black bg-opacity-50 z-50 hidden flex items-center justify-center">
+                    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-b-4 border-blue-600"></div>
+                </div>
+            </div>
+        </main>
+        <footer class="bg-blue-600 text-white py-6">
+            <div class="container mx-auto text-center text-sm">
+                <p>© 2024 PicTion - Dibuat dengan ❤️ untuk Anda.</p>
+            </div>
+        </footer>
+        <script src="{% static 'js/script.js' %}"></script>
+    </body>
+</html>
