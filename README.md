@@ -4,9 +4,9 @@
 PicTion adalah sebuah aplikasi berbasis web sederhana yang memanfaatkan teknologi AI untuk menganalisis gambar dan menghasilkan deskripsi otomatis. Proyek ini menggunakan model [`Salesforce/blip-image-captioning-base`](https://huggingface.co/Salesforce/blip-image-captioning-base) dari Hugging Face dan dikembangkan dengan framework Django.
 
 ## 🚀 Fitur Utama
-- **Unggah Gambar**: Mudah mengunggah gambar melalui antarmuka interaktif.
 - **Analisis AI Cepat**: Proses gambar dengan cepat untuk menghasilkan caption deskriptif.
 - **Desain Modern**: Dibangun menggunakan Tailwind CSS untuk tampilan yang responsif dan menarik.
+- **Unggah Gambar**: Mudah mengunggah gambar melalui antarmuka interaktif.
 - **Notifikasi Real-Time**: Memberikan feedback instan selama proses analisis.
 
 ## 📂 Teknologi yang Digunakan
