@@ -29,8 +29,8 @@ PicTion adalah sebuah aplikasi berbasis web sederhana yang memanfaatkan teknolog
     ```
 2. Buat virtual environment:
    ```bash
-    python -m venv venv
-    source venv/bin/activate   # Untuk Windows: venv\Scripts\activate
+   python -m venv venv
+   source venv/bin/activate   # Untuk Windows: venv\Scripts\activate
    ```
 3. Instal dependensi:
    ```bash
@@ -38,7 +38,7 @@ PicTion adalah sebuah aplikasi berbasis web sederhana yang memanfaatkan teknolog
    ```
 4. Jalankan server Django:
    ```bash
-    python manage.py runserver
+   python manage.py runserver
    ```
 5. Buka browser Anda dan akses:
    ```
