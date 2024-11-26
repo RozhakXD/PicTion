@@ -16,7 +16,7 @@ PicTion adalah sebuah aplikasi berbasis web sederhana yang memanfaatkan teknolog
 - Hosting: [Pythonanywhere](https://www.pythonanywhere.com/)
 
 ## 📥 Instalasi & Menjalankan Proyek
-- Prasyarat
+### Prasyarat
 - Python 3.x
 - Django
 - Paket-paket yang diperlukan tercantum di `requirements.txt`
