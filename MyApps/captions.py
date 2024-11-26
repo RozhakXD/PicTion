@@ -1,7 +1,8 @@
 from huggingface_hub import InferenceClient
 from googletrans import Translator
 
-client = InferenceClient(model="Salesforce/blip-image-captioning-base")
+# Ganti 'your_hf_access_token' dengan token akses Anda
+client = InferenceClient(model="Salesforce/blip-image-captioning-base", token="")
 translator = Translator()
 
 def generate_caption(image_path):
